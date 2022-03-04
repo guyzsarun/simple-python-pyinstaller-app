@@ -25,7 +25,7 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('Deploy') {
             steps {
                 container("deploy"){
                 sh  '/root/.pyenv/versions/3.7.5/bin/pyinstaller --onefile sources/add2vals.py'
