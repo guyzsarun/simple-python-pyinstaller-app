@@ -1,5 +1,9 @@
 pipeline {
-    agent none
+    agent {
+      kubernetes {
+          inheritFrom 'docker'
+      }
+
     stages {
         stage('Build') {
             agent {
