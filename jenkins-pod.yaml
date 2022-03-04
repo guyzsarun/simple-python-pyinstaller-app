@@ -3,11 +3,6 @@ kind: Pod
 spec:
   serviceAccount: jenkins
   containers:
-    - name: shell
-      image: alpine
-      command:
-        - cat
-      tty: true
     - name: python
       image: python:3.7-alpine3.14
       command:
@@ -19,7 +14,7 @@ spec:
         - cat
       tty: true
     - name: deploy
-      image: cdrx/pyinstaller-linux:python3
+      image: cdrx/pyinstaller-linux:latest
       command:
         - cat
       tty: true
