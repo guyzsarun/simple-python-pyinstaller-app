@@ -13,8 +13,13 @@ spec:
       command:
         - cat
       tty: true
-    - name: kustomize
-      image: nekottyo/kustomize-kubeval
+    - name: pytest
+      image: qnib/pytest
+      command:
+        - cat
+      tty: true
+    - name: deploy
+      image: cdrx/pyinstaller-linux:python2
       command:
         - cat
       tty: true
